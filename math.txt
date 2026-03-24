@@ -1,0 +1,48 @@
+basically we are doing what is 
+
+y=sign(w⋅x+b)
+the main input function 
+
+to update the wrong state
+w=w+η⋅y⋅x
+b=b+η⋅y
+
+
+
+f(x) =  w^T * x + b linear model
+
+approximation function
+y' = g(f(x)) = g(w^T *x + b)
+
+perceptron update rule:
+for each xi
+w = w + delta w
+b = b + delta b
+so
+w : weight , b: bias , 
+alpha = a : leaning rate [0,1] ,
+
+delta w = alpha*(yi - yi')*xi
+delta b = alpha*(yi - yi')
+
+example of how 
+y - data
+y' - approximation of perceptron
+
+y  y' | y-y'
+------------
+1  1  |  0
+1  0  |  1
+0  0  |  0
+0  1  |  -1
+
+how to train : steps
+training lean weights:
+-  initialise weights
+- for each step 
+    calc approx y' = g(f(x)) = g(w^T *x + b)
+    apply update rule delta w = alpha * (yi-yi')*xi 
+    apply update rule delta b = alpha * (yi - yi')
+
+to predict 
+    calculate y = g(f(x)) = g(w^T * x + b) 
